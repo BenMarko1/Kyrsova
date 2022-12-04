@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kyrsova.Controler.saladController">
+   <children>
+      <AnchorPane layoutY="109.0" prefHeight="298.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <Button layoutX="41.0" layoutY="223.0" mnemonicParsing="false" onAction="#createSalad" prefHeight="32.0" prefWidth="226.0" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 7;" text="Почати створювати салат">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="454.0" layoutY="223.0" mnemonicParsing="false" onAction="#sortVegetables" prefHeight="32.0" prefWidth="202.0" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 7;" text="Відсортувати овочі">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Button>
+            <AnchorPane fx:id="listPane" layoutX="34.0" layoutY="14.0" prefHeight="200.0" prefWidth="649.0">
+               <children>
+                  <ListView fx:id="listOfSalad" layoutX="14.0" layoutY="7.0" prefHeight="187.0" prefWidth="619.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="sortPane" disable="true" layoutX="25.0" layoutY="14.0" prefHeight="200.0" prefWidth="638.0" visible="false">
+               <children>
+                  <ChoiceBox fx:id="sortTypes" layoutX="244.0" layoutY="60.0" prefWidth="150.0" />
+                  <Button layoutX="277.0" layoutY="118.0" mnemonicParsing="false" onAction="#submitSortVegetables" text="Підтвердити" />
+                  <Label layoutX="215.0" layoutY="20.0" text="Виберіть тип сортування:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="createPane" disable="true" layoutX="61.0" layoutY="14.0" prefHeight="200.0" prefWidth="609.0" visible="false">
+               <children>
+                  <CheckBox fx:id="brocoli" layoutY="11.0" mnemonicParsing="false" text="Broccoli" />
+                  <CheckBox fx:id="carrot" layoutX="313.0" layoutY="11.0" mnemonicParsing="false" text="Carrot" />
+                  <CheckBox fx:id="celery" layoutX="242.0" layoutY="11.0" mnemonicParsing="false" text="Celery" />
+                  <CheckBox fx:id="cucumber" layoutX="473.0" layoutY="35.0" mnemonicParsing="false" text="Cucumber" />
+                  <CheckBox fx:id="corn" layoutX="313.0" layoutY="35.0" mnemonicParsing="false" text="Corn" />
+                  <CheckBox fx:id="garlic" layoutX="386.0" layoutY="35.0" mnemonicParsing="false" text="Garlic" />
+                  <CheckBox fx:id="potato" layoutX="84.0" layoutY="11.0" mnemonicParsing="false" text="Potato" />
+                  <CheckBox fx:id="peas" layoutX="167.0" layoutY="11.0" mnemonicParsing="false" text="Peas" />
+                  <CheckBox fx:id="parsley" layoutY="35.0" mnemonicParsing="false" text="Parsley" />
+                  <CheckBox fx:id="pumpkin" layoutX="473.0" layoutY="11.0" mnemonicParsing="false" text="Pumpkin" />
+                  <CheckBox fx:id="tomato" layoutX="167.0" layoutY="35.0" mnemonicParsing="false" text="Tomato" />
+                  <CheckBox fx:id="radish" layoutX="83.0" layoutY="35.0" mnemonicParsing="false" text="Radish" />
+                  <CheckBox fx:id="onion" layoutX="242.0" layoutY="35.0" mnemonicParsing="false" text="Onion" />
+                  <CheckBox fx:id="cabbage" layoutX="386.0" layoutY="11.0" mnemonicParsing="false" text="Cabbage" />
+                  <TextField fx:id="saladName" layoutX="213.0" layoutY="88.0" />
+                  <Button layoutX="245.0" layoutY="129.0" mnemonicParsing="false" onAction="#submitCreateSalad" text="Підтвердити" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="14.0" layoutY="14.0" text="Шеф-кухар" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="70.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitButton" layoutX="456.0" layoutY="23.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="237.0" style="-fx-background-color: #fafafa; -fx-border-radius: 50;" text="Закінчити програму">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="456.0" layoutY="67.0" mnemonicParsing="false" onAction="#returnToMain" prefHeight="26.0" prefWidth="237.0" style="-fx-background-color: #fafafa; -fx-border-radius: 50;" text="Повернутися до головного меню">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
